@@ -1,0 +1,5 @@
+{
+  "policyVersion": "1",
+  "description": "SPDX identifiers permitted in the default VERIFIED_COMMERCIAL corpus",
+  "licenses": ["CC0-1.0", "CC-BY-4.0", "CC-BY-3.0"]
+}

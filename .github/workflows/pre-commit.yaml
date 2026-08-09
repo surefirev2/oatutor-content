@@ -1,6 +1,4 @@
 ---
-# OWNED BY template-template — do not edit. Changes will be overwritten on the next sync.
-# Source: https://github.com/surefirev2/template-template
 name: pre-commit
 
 on:  # yamllint disable-line rule:truthy

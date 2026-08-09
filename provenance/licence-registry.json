@@ -1,0 +1,252 @@
+{
+  "policyVersion": "1",
+  "entries": [
+    {
+      "id": "openstax:precalculus-2e",
+      "title": "Precalculus 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-NC-SA-4.0",
+      "sourcePatterns": [
+        "/books/precalculus-2e/",
+        "/details/books/precalculus-2e"
+      ],
+      "attributionTemplate": "Source: OpenStax Precalculus 2e ({{sourceUrl}}), {{license}}. Not admitted to default commercial corpus.",
+      "notes": "Registered before precalculus:1 so details/ URL substring matching prefers 2e."
+    },
+    {
+      "id": "openstax:precalculus:1",
+      "title": "Precalculus",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/precalculus/",
+        "/details/books/precalculus"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Precalculus ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content.",
+      "notes": "1e / historical URL shape under /books/precalculus/ (not precalculus-2e)."
+    },
+    {
+      "id": "openstax:college-algebra-2e",
+      "title": "College Algebra 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-NC-SA-4.0",
+      "sourcePatterns": [
+        "/books/college-algebra-2e/",
+        "/details/books/college-algebra-2e"
+      ],
+      "attributionTemplate": "Source: OpenStax College Algebra 2e ({{sourceUrl}}), {{license}}. Not admitted to default commercial corpus."
+    },
+    {
+      "id": "openstax:college-algebra:1",
+      "title": "College Algebra",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/college-algebra/",
+        "/details/books/college-algebra"
+      ],
+      "attributionTemplate": "Adapted from OpenStax College Algebra ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:algebra-and-trigonometry-2e",
+      "title": "Algebra and Trigonometry 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-NC-SA-4.0",
+      "sourcePatterns": [
+        "/books/algebra-and-trigonometry-2e/",
+        "/details/books/algebra-and-trigonometry-2e"
+      ],
+      "attributionTemplate": "Source: OpenStax Algebra and Trigonometry 2e ({{sourceUrl}}), {{license}}. Not admitted to default commercial corpus."
+    },
+    {
+      "id": "openstax:algebra-and-trigonometry:1",
+      "title": "Algebra and Trigonometry",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/algebra-and-trigonometry/",
+        "/details/books/algebra-and-trigonometry"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Algebra and Trigonometry ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:elementary-algebra",
+      "title": "Elementary Algebra (1e)",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/elementary-algebra/",
+        "/details/books/elementary-algebra"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Elementary Algebra ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content.",
+      "notes": "Patterns must not match elementary-algebra-2e; more specific 2e entry is registered separately."
+    },
+    {
+      "id": "openstax:elementary-algebra-2e",
+      "title": "Elementary Algebra 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-NC-SA-4.0",
+      "sourcePatterns": [
+        "/books/elementary-algebra-2e/",
+        "/details/books/elementary-algebra-2e"
+      ],
+      "attributionTemplate": "Source: OpenStax Elementary Algebra 2e ({{sourceUrl}}), {{license}}. Not admitted to default commercial corpus.",
+      "notes": "Effective reviewed licence is NC-SA based on current OpenStax web terms; PDF footprints may differ."
+    },
+    {
+      "id": "openstax:intermediate-algebra",
+      "title": "Intermediate Algebra",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/intermediate-algebra/",
+        "/details/books/intermediate-algebra"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Intermediate Algebra ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:intermediate-algebra-2e",
+      "title": "Intermediate Algebra 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-NC-SA-4.0",
+      "sourcePatterns": [
+        "/books/intermediate-algebra-2e/",
+        "/details/books/intermediate-algebra-2e"
+      ],
+      "attributionTemplate": "Source: OpenStax Intermediate Algebra 2e ({{sourceUrl}}), {{license}}. Not admitted to default commercial corpus."
+    },
+    {
+      "id": "openstax:college-physics",
+      "title": "College Physics",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/college-physics/",
+        "/details/books/college-physics"
+      ],
+      "attributionTemplate": "Adapted from OpenStax College Physics ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:college-physics-2e",
+      "title": "College Physics 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/college-physics-2e/",
+        "/details/books/college-physics-2e"
+      ],
+      "attributionTemplate": "Adapted from OpenStax College Physics 2e ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:university-physics-volume-1",
+      "title": "University Physics Volume 1",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/university-physics-volume-1/",
+        "/details/books/university-physics-volume-1"
+      ],
+      "attributionTemplate": "Adapted from OpenStax University Physics Volume 1 ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:chemistry-2e",
+      "title": "Chemistry 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/chemistry-2e/",
+        "/details/books/chemistry-2e"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Chemistry 2e ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:anatomy-and-physiology",
+      "title": "Anatomy and Physiology",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/anatomy-and-physiology/",
+        "/details/books/anatomy-and-physiology"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Anatomy and Physiology ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:anatomy-and-physiology-2e",
+      "title": "Anatomy and Physiology 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/anatomy-and-physiology-2e/",
+        "/details/books/anatomy-and-physiology-2e"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Anatomy and Physiology 2e ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:statistics",
+      "title": "Introductory Statistics",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/introductory-statistics/",
+        "/details/books/introductory-statistics",
+        "/books/statistics/"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Introductory Statistics ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:calculus-volume-1",
+      "title": "Calculus Volume 1",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/calculus-volume-1/",
+        "/details/books/calculus-volume-1"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Calculus Volume 1 ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:calculus-volume-2",
+      "title": "Calculus Volume 2",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/calculus-volume-2/",
+        "/details/books/calculus-volume-2"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Calculus Volume 2 ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:calculus-volume-3",
+      "title": "Calculus Volume 3",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/calculus-volume-3/",
+        "/details/books/calculus-volume-3"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Calculus Volume 3 ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    },
+    {
+      "id": "openstax:prealgebra-2e",
+      "title": "Prealgebra 2e",
+      "publisher": "OpenStax",
+      "license": "CC-BY-NC-SA-4.0",
+      "sourcePatterns": [
+        "/books/prealgebra-2e/",
+        "/details/books/prealgebra-2e"
+      ],
+      "attributionTemplate": "Source: OpenStax Prealgebra 2e ({{sourceUrl}}), {{license}}. Not admitted to default commercial corpus."
+    },
+    {
+      "id": "openstax:prealgebra",
+      "title": "Prealgebra",
+      "publisher": "OpenStax",
+      "license": "CC-BY-4.0",
+      "sourcePatterns": [
+        "/books/prealgebra/",
+        "/details/books/prealgebra"
+      ],
+      "attributionTemplate": "Adapted from OpenStax Prealgebra ({{sourceUrl}}), licensed under {{license}}. Via OATutor-Content."
+    }
+  ]
+}

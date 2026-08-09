@@ -1,23 +1,73 @@
-# template-template
+# OATutor content (commercially verified)
 
-Template repository that syncs selected files to dependent repos via GitHub Actions. The workflow runs [surefirev2/repo-sync-action](https://github.com/surefirev2/repo-sync-action); config lives in [`.github/template-sync.yml`](.github/template-sync.yml). On push to `main` (or when opening a PR), the action clones each configured downstream repo, copies only the allowlisted paths, and opens or updates a PR with the changes.
+This repository is a mechanically derived subset of [CAHLR/OATutor-Content](https://github.com/CAHLR/OATutor-Content).
 
-## How it works
+Content is included under `content-pool/` only when it has satisfied this project's commercial-use verification policy (see [policy/POLICY.md](policy/POLICY.md)).
 
-- **Config:** [`.github/template-sync.yml`](.github/template-sync.yml) defines `repositories` and `include_paths` (and optional `repo_include_paths` per repo). Paths can be exact or globs (e.g. `.github/workflows/*`), which expand to all tracked files under that directory in this repo.
-- **Workflow:** [`.github/workflows/sync.yaml`](.github/workflows/sync.yaml) runs on push/PR to `main` and on `workflow_dispatch`. It checks out the repo, creates a GitHub App token, and runs `surefirev2/repo-sync-action`. Sync logic lives in the action repo.
+**Absence from this repository does not imply that the corresponding upstream content is incorrectly licensed or infringing.** It means only that the content has not satisfied this project's verification requirements for commercial Epiphanie use.
 
-## Setup
+Original attribution and provenance are preserved where required.
 
-- **GitHub App:** The sync workflow needs a GitHub App token (`vars.APP_ID`, `secrets.PRIVATE_KEY`) with `contents: write` and `pull-requests: write` so it can push branches and open/update PRs in dependent repos.
-- **Dependents:** Add repo names (or globs resolved via `gh repo list`) under `repositories` in `.github/template-sync.yml`. Use `include_paths` for the default file set and `repo_include_paths` for per-repo overrides.
+The authoritative upstream project remains [CAHLR/OATutor-Content](https://github.com/CAHLR/OATutor-Content).
 
-## Docs
+Epiphanie systems (including `math-desktop`) **must not** import OATutor content from any source other than a pinned revision of this repository.
 
-- [repo-sync-action README](https://github.com/surefirev2/repo-sync-action#readme) — usage, inputs, outputs.
-- [Config schema](https://github.com/surefirev2/repo-sync-action/blob/main/docs/template-sync-config-schema.md) — `.github/template-sync.yml` format and allowlist/blacklist behavior.
-- [Sync options](https://github.com/surefirev2/repo-sync-action/blob/main/docs/template-sync-options.md) — triggers, dry-run, draft PRs, permissions.
+## Trust invariant
+
+> If content exists under `content-pool/` on the default branch, Epiphanie's automated content systems may treat it as approved for commercial ingestion under the recorded licence and attribution requirements.
+
+## Architecture
+
+```text
+CAHLR/OATutor-Content @ pinned SHA
+        → audit (SPDX + licence registry)
+        → VERIFIED_COMMERCIAL | REVIEW_REQUIRED | BLOCKED
+        → content-pool/ (verified only)
+        → Epiphanie importer
+```
+
+## Requirements
+
+- Node.js 20+
+- git (for pinning upstream)
+
+## Commands
+
+```bash
+npm install
+
+# Pin upstream OATutor commit (clones to .cache/ if needed)
+make oatutor/pin UPSTREAM_SHA=<full-sha>
+
+# Classify every problem (writes artifacts/audit-report.json)
+make oatutor/audit
+
+# Human-readable summary
+make oatutor/report
+
+# Copy only VERIFIED_COMMERCIAL into content-pool/
+make oatutor/build
+
+# CI invariants (empty content-pool is OK)
+make oatutor/verify
+
+# Tests
+make test
+```
+
+## Provenance data
+
+| Path | Role |
+|------|------|
+| [provenance/source.json](provenance/source.json) | Pinned upstream commit + policy version |
+| [provenance/licence-registry.json](provenance/licence-registry.json) | Reviewed edition → SPDX licence mappings |
+| [provenance/approved-manifest.json](provenance/approved-manifest.json) | Audit records for items in `content-pool/` |
+| [policy/commercial-allowlist.json](policy/commercial-allowlist.json) | SPDX IDs allowed in default corpus |
 
 ## Development
 
-- **Pre-commit:** [`.pre-commit-config.yaml`](.pre-commit-config.yaml) runs YAML/JSON checks and basic hygiene. Install hooks with `pre-commit install`.
+```bash
+make init          # pre-commit install
+make test
+npm run typecheck
+```
