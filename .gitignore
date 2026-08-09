@@ -7,3 +7,20 @@ files_to_sync.txt
 files_to_sync_*.txt
 sync_diff.txt
 sync_diff_*.txt
+
+# Dependencies and build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Upstream clone (never commit raw OATutor)
+.cache/
+
+# Generated audit/report artifacts (CI uploads separately)
+artifacts/
+
+# OS / editor
+.DS_Store
+*.swp
+.env
+.env.*
