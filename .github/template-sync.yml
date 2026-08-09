@@ -1,0 +1,24 @@
+# Template sync: downstream repos and paths to sync.
+# - repositories: exact repo names or glob patterns; patterns resolved via gh repo list.
+# - include_paths: default allowlist for all repos (only these files). If empty, exclude_paths is used as blacklist.
+# - repo_include_paths: optional per-repo overrides (merged with include_paths). See repo-sync-action docs.
+
+repositories:
+  - template-1-terraform
+  - template-cursor
+  - terraform-github
+  - terraform-cloudflare
+
+include_paths:
+  - .github/workflows/dependabot-automerge.yaml
+  - .github/workflows/pre-commit-update.yaml
+  - .github/workflows/pre-commit.yaml
+
+# sync.yaml only for template-* repos (they run the action; others do not)
+repo_include_paths:
+  template-1-terraform:
+    - .github/workflows/sync.yaml
+  template-cursor:
+    - .github/workflows/sync.yaml
+
+exclude_paths: []

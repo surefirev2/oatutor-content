@@ -1,0 +1,40 @@
+---
+# OWNED BY template-template — do not edit. Changes will be overwritten on the next sync.
+# Source: https://github.com/surefirev2/template-template
+name: Auto Actions
+
+on: pull_request_target # yamllint disable-line rule:truthy
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+  dependabot-automerge:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+    - uses: actions/create-github-app-token@v3
+      id: app-token
+      with:
+        app-id: ${{ vars.APP_ID }}
+        private-key: ${{ secrets.PRIVATE_KEY }}
+
+    - name: Gather Dependabot metadata
+      id: metadata
+      uses: dependabot/fetch-metadata@v3.1.0
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        skip-commit-verification: true
+
+    - name: Approve PR
+      run: gh pr review --approve "$PR_URL"
+      env:
+        PR_URL: ${{github.event.pull_request.html_url}}
+        GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+
+    - name: Enable auto-merge
+      run: gh pr merge --auto --squash "$PR_URL"
+      env:
+        PR_URL: ${{github.event.pull_request.html_url}}
+        GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
